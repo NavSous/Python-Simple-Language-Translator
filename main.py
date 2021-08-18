@@ -12,7 +12,7 @@ def autotranslate(sourcelang, destlang):
     mic = sr.Microphone()
     with mic as source:
         r.adjust_for_ambient_noise(source, duration=1)
-        print("say anything: ") 
+        print("Say anything: ") 
         audio = r.listen(source)
     print("Speech Recognized")   
     b = r.recognize_google(audio, language = sourcelang)
